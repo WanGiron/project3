@@ -1,8 +1,10 @@
 .nav-main {
   display: flex;
+  padding: 0px;
+  padding: 10px;
+  height: 50px;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   margin-top: 10vh;
   width: 100vw;
   background-color: #ecf0f1;
@@ -17,7 +19,7 @@
   list-style-type: none;
 }
 
-/* .nav-link1:hover{
-    transform: scale(1.2);
-
-} */
+ul {
+  margin-top:10px ;
+padding: 0px;
+}

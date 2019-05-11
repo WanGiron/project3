@@ -83,7 +83,7 @@ class App extends Component {
           <NavbarUser user={this.state.user} logOut={this.logOut}/>
           <NavbarMain />
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/' render={() => (<Home {...this.props} setUser={this.setUser} user={this.state.user}/>)}/>
             <Route exact path="/modern" render={() => (<Modern {...this.props} setUser={this.setUser} user={this.state.user} />)}/>
             <Route exact path="/decor" render={() => (<Decor {...this.props} setUser={this.setUser} user={this.state.user} />)} />
             <Route exact path="/luxury" render={() => (<Luxury {...this.props} setUser={this.setUser} user={this.state.user} />)}/>

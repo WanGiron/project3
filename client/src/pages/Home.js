@@ -1,10 +1,14 @@
 import React, { Component } from "react";
+import Search from './Search';
 import { Link } from "react-router-dom";
 
 class Home extends Component {
   render() {
     return (
       <div className="h">
+      <div className="nav-bar">
+      <Search  email={this.props.user.email}/>
+      </div>
         <div className="container-fullwidth">
           <div id="box1">
             <h2>

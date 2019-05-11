@@ -36,6 +36,7 @@ class Decor extends Component {
         axios.post("/api/db/favItems", fav)
             .then(function (data) {
             });
+            alert("Added to favorites");
     }
 
     render() {

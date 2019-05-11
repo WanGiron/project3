@@ -19,11 +19,13 @@ class Results extends Component {
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
       }
-
+componentWillMount=()=>{
+    this.setState({email: this.props.location.state.value});
+}
     componentDidMount() {
         this.handleSubmit()
         const { match, location, history } = this.props;
-        this.setState({email: this.props.location.state.value});
+        // this.setState({email: this.props.location.state.value});
     }
 
     handleClick = (url) => {
