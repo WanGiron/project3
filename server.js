@@ -18,7 +18,7 @@ require("./config/passport")(passport, db);
 
 
 
-
+var PORT = process.env.PORT || 5000;
 
 
 // Serve the static files from the React app
@@ -252,11 +252,11 @@ app.get("/api/db/favItems/users", (req, res) => {
 
 });
 
-var PORT = process.env.PORT || 5005;
+
 // Only for Deployment -HEROKU- Serve up static assets DO NOT TOUCH !!!
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));  
-    
+
     app.get('*', (req, res)=>{
         res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
     })  
