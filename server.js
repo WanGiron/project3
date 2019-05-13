@@ -17,12 +17,12 @@ require("./config/passport")(passport, db);
 
 
 var PORT = process.env.PORT || 5005;
-// Only for Deployment -HEROKU- Serve up static assets DO NOT TOUCHE !!!
+// Only for Deployment -HEROKU- Serve up static assets DO NOT TOUCH !!!
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 
     app.get('*', (req, res)=>{
-        res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+        res.sendFile(path.join(__dirname, '/client/build/index.html'));
     })
     
 };
