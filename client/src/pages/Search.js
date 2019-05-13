@@ -26,7 +26,7 @@ class Search extends React.Component {
         return (
             <div>
                 <label>
-                    <input type="text" onChange={this.handleChange} />
+                    <input type="text" onChange={this.handleChange} />Search
                 </label>
                 <Link to={{
                     pathname: "/results/"+this.state.value,
