@@ -4,7 +4,13 @@
   /* width: 1500px; */
   /* border: 1px solid black; */
 }
+.input-div{
+  margin-left: 20px;
+}
 
+.input-btn{
+  margin-left: 10px;
+}
 /* modern  */
 
 .modern-container {

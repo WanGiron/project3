@@ -5,12 +5,10 @@ function Images(props) {
    return (
        <span className="card">
            <div
-               // className='image-box hover col-12'
-               onClick={() => props.handleClick(props.url)}
-               // onClick={props.openModalHandler}
+               
                style={{ backgroundImage: `url(${props.url})`, backgroundSize: "cover", height: "200px", width: "300px",borderRadius: "5px", margin: "5px"}}>
                <a href="#" style={{textDecoration:"none", fontSize:"25px", marginRight:"10px"}}
-                   className="heart"
+                   className="heart" onClick={() => props.handleClick(props.url)}
                >&#x2764;</a>
 
 

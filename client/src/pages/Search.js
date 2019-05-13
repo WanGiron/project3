@@ -24,9 +24,9 @@ class Search extends React.Component {
     render() {
         // console.log(this.state.value);
         return (
-            <div>
+            <div className="input-div">
                 <label>
-                    <input type="text" onChange={this.handleChange} />Search
+                    <input type="text" onChange={this.handleChange} placeholder="Search for items"/>
                 </label>
                 <Link to={{
                     pathname: "/results/"+this.state.value,
@@ -36,7 +36,7 @@ class Search extends React.Component {
                     aria-label="Bootstrap"
                     style={{ textDecoration: "none", color: "black" }}
                     style={{ textDecoration: "none", color: "black" }} >
-                    <button className="btn-dark btn-sm" >Go</button>
+                    <button className="btn-dark btn-sm input-btn" >Go</button>
                 </Link>
             </div>
         )
