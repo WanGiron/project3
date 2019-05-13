@@ -8,6 +8,6 @@ import App from './App';
 // import PhotoWidgetUploader from './components/PhotoWidgetUploader';
 
 render(( 
-<HashRouter><App/></HashRouter>
+<App/>
 
 ), document.getElementById('root'));
