@@ -64,7 +64,7 @@ componentWillMount=()=>{
         return (
             <div>
                 <div>
-                    <h3 style={{marginTop:"20px", paddingBottom:"20px"}}>This are your results.</h3>
+                    <h3 style={{marginTop:"20px", paddingBottom:"20px"}}>These are your results.</h3>
                     {img.map(res => (
                         <Images
                             url={res.url}

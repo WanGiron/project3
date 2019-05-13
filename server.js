@@ -20,7 +20,12 @@ var PORT = process.env.PORT || 5005;
 // Only for Deployment -HEROKU- Serve up static assets DO NOT TOUCHE !!!
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
+    app.get('*', (request, response)=>{
+        response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    })
 }
+
+
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '/client/public')));
 
