@@ -49,7 +49,7 @@ class LoginLocal extends Component{
             });
         })
     }
-    
+
     render() {
         if(this.props.user && this.props.user.email){
             return this.props.user.name == 'Admin' ? (<Redirect to="/admin"/>) :(<Redirect to="/"/>);
