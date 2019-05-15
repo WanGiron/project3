@@ -7,9 +7,10 @@ function Images(props) {
            <div
                
                style={{ backgroundImage: `url(${props.url})`, backgroundSize: "cover", height: "200px", width: "300px",borderRadius: "5px", margin: "5px"}}>
-               <a href="#" style={{textDecoration:"none", fontSize:"25px", marginRight:"10px"}}
+               {(props.email !== undefined ) ?  <a href="#" style={{textDecoration:"none", fontSize:"25px", marginRight:"10px"}}
                    className="heart" onClick={() => props.handleClick(props.url)}
-               >&#x2764;</a>
+               >&#x2764;</a> : ""}
+              
 
 
                {/* <img src={props.url} className='photos' alt={props.url}></img> */}

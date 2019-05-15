@@ -18,19 +18,7 @@ class Modern extends Component {
     componentDidMount() {
         // const { modern } = this.props.match.params;
         this.getPhotos();
-        // this.setState({email: this.props.user.email});
-    }
-
-    openModalHandler = () => {
-        this.setState({
-            isShowing: true
-        });
-    }
-
-    closeModalHandler = () => {
-        this.setState({
-            isShowing: false
-        });
+        this.setState({name: this.props.user.email});
     }
 
     // Retrieves the list of items from the Express app
@@ -45,7 +33,6 @@ class Modern extends Component {
         const fav = {
             user_email: this.state.name,
             item_name: url
-            // user_email: this.state.email
         };
 
         // Send an AJAX POST-request//
@@ -56,17 +43,15 @@ class Modern extends Component {
             });
     }
 
-    // 
-
     render() {
-
+console.log(this.state.name);
         const photosUrl = this.state.arrPhoto.map(
             (images) => <Images
+                email={this.state.name} 
                 key={images.public_id}
                 id={images.public_id}
                 url={images.url}
                 handleClick={this.handleClick}
-                // openModalHandler={this.openModalHandler}
             />
         )
 
@@ -78,34 +63,7 @@ class Modern extends Component {
                 <div className="jumbotron-fluid text-center">
                     <i style={{ fontSize: "50px" }}>Modern</i>
                 </div>
-                {/* <br />
-                <br /> */}
-                {/* <Modal
-                    // className="modal"
-                    show={this.state.isShowing}
-                    close={this.closeModalHandler}>
-                </Modal> */}
-                {/* <div className="row"> */}
-                    {/* <div className="col-1" /> */}
-                    {/* <div className="image-container col-10">{photosUrl}</div> */}
-                    <div className="wrapper">{photosUrl}</div>
-                    {/* <div className="col-1" /> */}
-                {/* </div> */}
-                <br />
-
-
-                
-
-
-
-                {/* <br /> */}
-                {/* <div className="row"> */}
-                    {/* <div className="col-1" /> */}
-                    {/* <div className="image-container col-10">{photosUrl2}</div> */}
-                    {/* {photosUrl2} */}
-                    {/* <div className="col-1" /> */}
-                {/* </div> */}
-                {/* <br /> */}
+                <div className="wrapper">{photosUrl}</div>
             </div>
 
         );

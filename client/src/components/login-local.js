@@ -50,6 +50,14 @@ class LoginLocal extends Component{
         })
     }
 
+
+    // componentDidMount = () => {
+    //     // AUTHAPI.getUserData().then( userResponse => {
+    //     //     if(userResponse.data){
+    //     //         this.props.setUser(userResponse.data);
+    //     //     }
+    //     // })
+    // }
     render() {
         if(this.props.user && this.props.user.email){
             return this.props.user.name == 'Admin' ? (<Redirect to="/admin"/>) :(<Redirect to="/"/>);

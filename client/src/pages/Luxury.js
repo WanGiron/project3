@@ -16,6 +16,7 @@ class Luxury extends Component {
     // Fetch the list on first mount
     componentDidMount() {
         this.getPhotos();
+        this.setState({name: this.props.user.email});
     }
 
     // Retrieves the list of items from the Express app
@@ -44,6 +45,7 @@ class Luxury extends Component {
 
         const photosUrl = this.state.arrPhoto.map(
             (images) => <Images
+            email={this.state.name}
                 key={images.public_id}
                 id={images.public_id}
                 url={images.url}

@@ -20,14 +20,6 @@ class Admin extends Component {
     }
 
 
-
-    // Fetch the list on first mount
-    // componentDidMount() {
-    //     this.getPhotos();
-    //     console.log("props: "+this.props.user.name)
-    //     this.setState({name: this.props.user.name});
-    // }
-
     // Retrieves the list of items from the Express app
     getPhotos = () => {
         fetch('/api/get_photos/modern')

@@ -17,7 +17,7 @@ class PersonalAccount extends Component {
         //     if(userResponse.data){
         //         props.setUser(userResponse.data);
         //     }
-        // })
+       // })
     }
     
 
