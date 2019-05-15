@@ -75,6 +75,7 @@ componentWillMount=()=>{
                     <h3 style={{marginTop:"20px", paddingBottom:"20px"}}>These are your results.</h3>
                     {img.map((res, index) => (
                         <Images
+                        email={this.state.email}
                         keys={index}
                             url={res.url}
                             handleClick={this.handleClick} />
