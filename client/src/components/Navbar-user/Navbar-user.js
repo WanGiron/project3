@@ -34,7 +34,7 @@ class NavbarUser extends React.Component {
           <i className="fa fa-home" style={{ marginLeft: "10px", marginTop: "6px", color: "white", fontSize: "30px" }}></i>
         </Link>
 
-       
+       <div><h3 style={ {marginLeft:"40px", fontSize:"30px"}}>HDesigns</h3></div>
         <ul>
           <li> <Search email={this.props.user.email} /></li>
           {(!this.props.user ? (<li className="nav-item"> <Link to="/signup" className="nav-link" style={{ textDecoration: "none", color: "black" }}> <p className="nav-hover" style={{ color: 'white' }}><i className="far fa-user"></i>Sign Up</p> </Link> </li>) : "")}
