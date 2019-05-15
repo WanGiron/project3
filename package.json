@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "add": "^2.0.6",
     "axios": "^0.18.0",
@@ -35,10 +35,12 @@
     "react-bootstrap": "^1.0.0-beta.8",
     "react-medium-image-zoom": "^3.0.16",
     "react-medium-zoom": "^1.0.0",
+    "react-modal": "^3.8.1",
+    "react-overlays": "^1.2.0",
     "react-parallax": "^2.2.0",
     "react-scroll-parallax": "^2.1.2",
-    "sequelize": "^5.7.4",
-    "yarn": "^1.15.2"
+    "sequelize": "^5.8.6",
+    "yarn": "^1.16.0"
   },
   "devDependencies": {},
   "repository": {

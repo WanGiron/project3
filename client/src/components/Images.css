@@ -11,6 +11,10 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+.user-photo{
+  margin-top: 30px;
+}
 .card{
   margin-bottom: 15px;
 }

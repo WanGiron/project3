@@ -30,6 +30,7 @@ import Search from "./pages/Search";
 import Results from "./pages/Results";
 
 import Admin from './pages/Admin';
+import Images from './components/Images3';
 import SignUp from './components/SignUp';
 import LogIn from './pages/LogIn';
 import LocalAPI from './utils/local-auth';
@@ -92,6 +93,7 @@ class App extends Component {
             <Route exact path="/admin" render={() => (<Admin {...this.props} user={this.state.user} />)}/>            
             <Route exact path='/login' component={LogIn} />
             <Route path='/signup' component={SignUp} />
+            <Route path='/images' component={Images} />
             <Route exact path="/logout" component={Logout} />
             <Route exact path="/login-local" render={() => (<LoginLocal {...this.props} setUser={this.setUser} user={this.state.user} />)} />
             <Route exact path="/personal-account" render={

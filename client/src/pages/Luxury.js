@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Images from '../components/Images';
 import axios from "axios";
+// import Modal from 'react-modal';
 // import './ApiPhotos.css';
 
 
@@ -10,7 +11,8 @@ class Luxury extends Component {
         arrPhoto: [],
         showPhoto: 5,
         showPhoto2: 10,
-        name: this.props.user.email
+        name: this.props.user.email,
+        modalIsOpen: false
     }
 
     // Fetch the list on first mount
@@ -53,24 +55,6 @@ class Luxury extends Component {
             />
         )
 
-        // const photosUrl = this.state.arrPhoto.slice(0, this.state.showPhoto).map(
-        //     (images) => <Images
-        //         key={images.public_id}
-        //         id={images.public_id}
-        //         url={images.url}
-        //         handleClick={this.handleClick}
-        //     />
-        // )
-
-        // const photosUrl2 = this.state.arrPhoto.slice(5, this.state.showPhoto2).map(
-        //     (images) => <Images
-        //         key={images.public_id}
-        //         id={images.public_id}
-        //         url={images.url}
-        //         handleClick={this.handleClick}
-        //     />
-        // )
-
         return (
 
             <div>
@@ -79,23 +63,8 @@ class Luxury extends Component {
                     <i style={{ fontSize: "50px" }}>Luxury</i>
                 </div>
                 <br />
-                <br />
-                {/* <div className="row"> */}
-                    {/* <div className="col-1" /> */}
-                    {/* <div className="image-container col-10">{photosUrl}</div> */}
                     <div className="wrapper">{photosUrl}</div>
-                    {/* <div className="col-1" /> */}
-                {/* </div> */}
-                <br />
-
-                {/* <br /> */}
-                {/* <div className="row"> */}
-                    {/* <div className="col-1" /> */}
-                    {/* <div className="image-container col-10">{photosUrl2}</div> */}
-                    {/* {photosUrl2} */}
-                    {/* <div className="col-1" /> */}
-                {/* </div> */}
-                {/* <br /> */}
+                 
             </div>
 
         );

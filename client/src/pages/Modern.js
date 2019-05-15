@@ -2,23 +2,37 @@ import React, { Component } from 'react';
 import Images from '../components/Images';
 import axios from "axios";
 import "./Pages.css";
-import Modal from '../components/Modal';
+// import Modal from 'react-bootstrap/Modal';
+// import ModalDialog from 'react-bootstrap/ModalDialog';
+// import ModalHeader from 'react-bootstrap/ModalHeader';
+// import ModalTitle from 'react-bootstrap/ModalTitle';
+// import ModalFooter from 'react-bootstrap/ModalFooter';
+// import Button from 'react-bootstrap/Modal';
+
+
 
 class Modern extends Component {
-    // Initialize the state
-    state = {
-        arrPhoto: [],
-        showPhoto: 5,
-        showPhoto2: 10,
-        name: this.props.user.email,
-        isShowing: false
-    }
 
+
+    constructor(props, context) {
+        super(props, context);
+
+        // this.handleShow = this.handleShow.bind(this);
+        // this.handleClose = this.handleClose.bind(this);
+
+        this.state = {
+            arrPhoto: [],
+            showPhoto: 5,
+            showPhoto2: 10,
+            name: this.props.user.email,
+            // show: false,
+        }
+    }
     // Fetch the list on first mount
     componentDidMount() {
         // const { modern } = this.props.match.params;
         this.getPhotos();
-        this.setState({name: this.props.user.email});
+        this.setState({ name: this.props.user.email });
     }
 
     // Retrieves the list of items from the Express app
@@ -42,12 +56,18 @@ class Modern extends Component {
                 alert("Added to favorites");
             });
     }
+    // handleClose() {
+    //     this.setState({ show: false });
+    // }
 
+    // handleShow() {
+    //     this.setState({ show: true });
+    // }
     render() {
-console.log(this.state.name);
+        console.log(this.state.name);
         const photosUrl = this.state.arrPhoto.map(
             (images) => <Images
-                email={this.state.name} 
+                email={this.state.name}
                 key={images.public_id}
                 id={images.public_id}
                 url={images.url}
@@ -59,11 +79,13 @@ console.log(this.state.name);
         return (
 
             <div className="overlay">
-                {/* <br /> */}
+                <br />
                 <div className="jumbotron-fluid text-center">
                     <i style={{ fontSize: "50px" }}>Modern</i>
                 </div>
+                <br/>
                 <div className="wrapper">{photosUrl}</div>
+
             </div>
 
         );

@@ -52,25 +52,6 @@ class Antique extends Component {
                 handleClick={this.handleClick}
             />
         )
-
-        // const photosUrl = this.state.arrPhoto.slice(0, this.state.showPhoto).map(
-        //     (images) => <Images
-        //         key={images.public_id}
-        //         id={images.public_id}
-        //         url={images.url}
-        //         handleClick={this.handleClick}
-        //     />
-        // )
-
-        // const photosUrl2 = this.state.arrPhoto.slice(5, this.state.showPhoto2).map(
-        //     (images) => <Images
-        //         key={images.public_id}
-        //         id={images.public_id}
-        //         url={images.url}
-        //         handleClick={this.handleClick}
-        //     />
-        // )
-
         return (
 
             <div>
@@ -79,23 +60,7 @@ class Antique extends Component {
                     <i style={{ fontSize: "50px" }}>Antique</i>
                 </div>
                 <br />
-                <br />
-                {/* <div className="row"> */}
-                    {/* <div className="col-1" /> */}
-                    {/* <div className="image-container col-10">{photosUrl}</div> */}
                     <div className="wrapper">{photosUrl}</div>
-                    {/* <div className="col-1" /> */}
-                {/* </div> */}
-                <br />
-
-                {/* <br /> */}
-                {/* <div className="row"> */}
-                    {/* <div className="col-1" /> */}
-                    {/* <div className="image-container col-10">{photosUrl2}</div> */}
-                    {/* {photosUrl2} */}
-                    {/* <div className="col-1" /> */}
-                {/* </div> */}
-                {/* <br /> */}
             </div>
 
         );
