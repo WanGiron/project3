@@ -7,7 +7,7 @@ class Home extends Component {
     return (
       <div className="h">
       <div className="nav-bar">
-      {/* <Search  email={this.props.user.email}/> */}
+      <Search  email={this.props.user.email}/>
       </div>
         <div className="container-fullwidth">
           <div id="box1">

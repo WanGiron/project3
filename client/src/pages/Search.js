@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import Results from './Results';
 class Search extends React.Component {
     constructor(props) {
         super(props);
@@ -18,25 +19,25 @@ class Search extends React.Component {
     handleChange = (event) => {
         this.setState({ value: event.target.value });
     }
-    
-   
    
     render() {
         // console.log(this.state.value);
         return (
             <div className="input-div">
+            
                 <label>
                     <input type="text" onChange={this.handleChange} placeholder="Search for items"/>
                 </label>
                 <Link to={{
                     pathname: "/results/"+this.state.value,
                     state: { value: this.props.email }
-                }}
+                }} 
+                
                     className="navbar-brand"
                     aria-label="Bootstrap"
                     style={{ textDecoration: "none", color: "black" }}
                     style={{ textDecoration: "none", color: "black" }} >
-                    <button className="btn-dark btn-sm input-btn" >Go</button>
+                    <button className="btn-dark btn-sm input-btn">Go</button>
                 </Link>
             </div>
         )

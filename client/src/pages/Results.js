@@ -18,19 +18,20 @@ class Results extends Component {
         match: PropTypes.object.isRequired,
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
-      }
-
-componentWillMount=()=>{
-    this.setState({email: this.props.location.state.value});
-}
+    }
 
 // componentdidUpdate=()=>{
 //     this.setState({email: this.props.location.state.value});
 // }
     componentDidMount() {
-        this.handleSubmit()
+        this.handleSubmit();
+        this.setState({email: this.props.location.state.value});
         const { match, location, history } = this.props;
         // this.setState({email: this.props.location.state.value});
+    }
+
+    load=()=>{
+        window.location.reload();
     }
 
     handleClick = (url) => {
